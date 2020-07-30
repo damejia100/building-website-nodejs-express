@@ -10,11 +10,11 @@ app.set('views', path.join(__dirname), './views')
 
 app.use(express.static(path.join(__dirname, './static')))
 
-app.get('/', (req, res, next) => {
+app.get('/', (req, res) => {
   res.render('pages/index.ejs', {pageTitle: 'Welcome'})
 })
 
-app.get('/speakers', (req, res, next) => {
+app.get('/speakers', (req, res) => {
   res.sendFile(path.join(__dirname, './static/speakers.html'))
 })
 
