@@ -11,7 +11,7 @@ app.set('views', path.join(__dirname), './views')
 app.use(express.static(path.join(__dirname, './static')))
 
 app.get('/', (req, res, next) => {
-  res.render('pages/index', {pageTitle: 'Welcome'})
+  res.render('pages/index.ejs', {pageTitle: 'Welcome'})
 })
 
 app.get('/speakers', (req, res, next) => {
